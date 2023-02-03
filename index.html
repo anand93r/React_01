@@ -19,7 +19,7 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#ab">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#pr">Projects</a>
@@ -46,7 +46,7 @@
     
     <div class="grid-2">
         <div class="section-1">
-            <img src="./200.jpg" alt="anand.jpg">
+            <img id="im" onclick="change()" ondblclick="remove()" src="./200.jpg" onclick="change()" alt="click again">
             <h2>Anand R</h2>
             <p>Ernakulam, Kerala</p>
             <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -54,7 +54,7 @@
             <a href="https://github.com/" target="_blank"><i class="fab fa-github" ></i></a>
         </div>
         <div class="section-2">
-            <h2>About</h2>
+            <h2 id="ab">About</h2>
             <p>My name is Anand R. I'm a GIS Engineer based in Ernakulam☀️<br>I describe myself as a passionate developer who loves coding and the web platform ❤️.
 
             </p>
@@ -83,7 +83,19 @@
         </div>
         <!-- Copyright -->
       </footer>
+
+    
 </div>
+
+<script>
+  var item=document.getElementById("im")
+  function change(){
+    item.setAttribute('src','./200.jpg')
+  }
+  function remove(){
+    item.removeAttribute("src","")
+  }
+</script>
 
 </body>
 </html>
